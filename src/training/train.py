@@ -1,4 +1,3 @@
-import pandas as pd
 import mlflow
 import mlflow.lightgbm
 import lightgbm as lgb
