@@ -1,10 +1,10 @@
-# NYC Taxi Trip Duration — End-to-End MLOps Pipeline
+# NYC Taxi Trip Duration - End-to-End MLOps Pipeline
 
 [![CI](https://github.com/mounikagajja/nyc-taxi-mlops/actions/workflows/ci.yml/badge.svg)](https://github.com/mounikagajja/nyc-taxi-mlops/actions)
 [![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)]()
 [![MLflow](https://img.shields.io/badge/mlflow-3.x-orange.svg)]()
 
-> End-to-end MLOps pipeline predicting NYC taxi trip duration — built on Azure Databricks, Delta Lake, MLflow 3, FastAPI, and GitHub Actions CI/CD.
+> End-to-end MLOps pipeline predicting NYC taxi trip duration - built on Azure Databricks, Delta Lake, MLflow 3, FastAPI, and GitHub Actions CI/CD.
 
 ## What This Project Does
 
@@ -55,10 +55,10 @@ Raw Parquet → Delta Lake → Spark Features → LightGBM + MLflow → FastAPI 
 
 ## Key Design Decisions
 
-- **LightGBM over deep learning** — tabular regression with interpretability. SHAP values explain each prediction.
-- **Delta Lake partitioned by pickup_date** — enables partition pruning for time-based retraining windows.
-- **MLflow 3 aliases** — uses champion/challenger pattern instead of deprecated Production stage.
-- **KS test for drift** — detects distributional shift between reference and current data. Retrain triggered if drift share exceeds 20%.
+- **LightGBM over deep learning** - tabular regression with interpretability. SHAP values explain each prediction.
+- **Delta Lake partitioned by pickup_date** - enables partition pruning for time-based retraining windows.
+- **MLflow 3 aliases** - uses champion/challenger pattern instead of deprecated Production stage.
+- **KS test for drift** - detects distributional shift between reference and current data. Retrain triggered if drift share exceeds 20%.
 
 ## Monitoring
 
@@ -66,6 +66,6 @@ Drift detection compares January 2024 (reference) vs February 2024 (current) dat
 
 ## Dataset
 
-NYC Taxi and Limousine Commission (TLC) Yellow Taxi Trip Records — January and February 2024.
+NYC Taxi and Limousine Commission (TLC) Yellow Taxi Trip Records - January and February 2024.
 
 Source: https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page
